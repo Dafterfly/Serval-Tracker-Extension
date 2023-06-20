@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Serval Tracker Linker",
+  "version": "1.0",
+  "description": "Adds a link to Serval Tracker on Takealot product pages.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.takealot.com/*"],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
