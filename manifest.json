@@ -1,14 +1,17 @@
 {
-  "manifest_version": 2,
-  "name": "Serval Tracker Linker",
-  "version": "1.0",
-  "description": "Adds a link to Serval Tracker on Takealot product pages.",
-  "content_scripts": [
-    {
-      "matches": ["*://*.takealot.com/*"],
-      "js": [
-        "content.js"
-      ]
+    "manifest_version": 2,
+    "name": "Serval Tracker Linker",
+    "version": "1.0",
+    "description": "Adds a link to Serval Tracker on Takealot product pages.",
+    "content_scripts": [
+        {
+            "matches": ["*://*.takealot.com/*"],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "icons": {
+        "48": "serval_favicon_48x48.png",
     }
-  ]
 }

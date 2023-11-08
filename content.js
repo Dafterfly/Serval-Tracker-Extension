@@ -13,10 +13,34 @@ function addButton() {
     
     if (productId !== null) {
         // Create a button element
+        // Create an image element for the icon
+        const icon = document.createElement('img');
+        icon.src = 'https://www.servaltracker.com/static/images/favicons/serval_favicon_48x48.png'; // Set the path to your icon
+        icon.alt = 'Icon'; // Add alt text for accessibility
+        icon.width = 24; // Set the width (adjust as needed)
+        icon.height = 24; // Set the height (adjust as needed)
+        
         const button = document.createElement('a');
-        button.innerText = 'Track on Serval Tracker';
         button.href = "https://www.servaltracker.com/products/" + productId;
         
+       // Create a span element for the text
+        const buttonText = document.createElement('span');
+        buttonText.innerText = 'Track on Serval Tracker';
+
+        // Create a flex container
+        const flexContainer = document.createElement('div');
+        flexContainer.style.display = 'flex';
+        flexContainer.style.alignItems = 'center';
+        flexContainer.style.justifyContent = 'center'; // Center horizontally
+
+
+        // Append the icon and text to the flex container
+        flexContainer.appendChild(icon);
+        flexContainer.appendChild(buttonText);
+
+        // Append the flex container to the button
+        button.appendChild(flexContainer);
+
         // Style the button
         button.style.display = 'block';
         button.style.marginTop = '10px';
