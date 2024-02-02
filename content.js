@@ -28,6 +28,7 @@ function createButton(productId) {
 
     const button = document.createElement('a');
     button.href = `https://www.servaltracker.com/products/${productId}`;
+    button.target = '_blank';
     button.style.display = 'block';
     button.style.marginTop = '10px';
     button.style.padding = '10px';
