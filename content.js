@@ -8,24 +8,24 @@ function extractProductIdFromUrl(url) {
 // Create and style the button
 function createButton(productId) {
     const iconUrl = 'https://www.servaltracker.com/static/images/favicons/serval_favicon_48x48.png';
-
+    
     const icon = document.createElement('img');
     icon.src = iconUrl;
     icon.alt = 'Icon';
     icon.width = 24;
     icon.height = 24;
-
+    
     const buttonText = document.createElement('span');
     buttonText.innerText = 'Track on Serval Tracker';
-
+    
     const flexContainer = document.createElement('div');
     flexContainer.style.display = 'flex';
     flexContainer.style.alignItems = 'center';
     flexContainer.style.justifyContent = 'center';
-
+    
     flexContainer.appendChild(icon);
     flexContainer.appendChild(buttonText);
-
+    
     const button = document.createElement('a');
     button.href = `https://www.servaltracker.com/products/${productId}`;
     button.target = '_blank';
@@ -44,7 +44,7 @@ function createButton(productId) {
 // Add the button after the product title
 function addButton() {
     const productId = extractProductIdFromUrl(window.location.href);
-
+    
     if (productId !== null) {
         const allTitleElements = document.querySelectorAll('.product-title');
         const titleElement = allTitleElements[allTitleElements.length - 1];
