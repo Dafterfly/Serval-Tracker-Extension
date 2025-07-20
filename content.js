@@ -43,12 +43,10 @@ function createButton(productId) {
 
 // Add the button after the product title
 function addButton() {
-    console.log("hello")
     const productId = extractProductIdFromUrl(window.location.href);
 
     if (productId !== null) {
         const allTitleElements = document.querySelectorAll('.product-title');
-        console.log(allTitleElements);
         const titleElement = allTitleElements[allTitleElements.length - 1];
         if (titleElement && !document.querySelector('.serval-button') && allTitleElements.length > 1) {
             const button = createButton(productId);
@@ -70,8 +68,3 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 // Add button on page load
 addButton();
-try {
-  console.log(ujgbkb);
-} catch (e) {
-  console.log("Expected error:", e);
-}
