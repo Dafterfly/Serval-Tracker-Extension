@@ -48,7 +48,7 @@ function addButton() {
     if (productId !== null) {
         const allTitleElements = document.querySelectorAll('.product-title');
         const titleElement = allTitleElements[allTitleElements.length - 1];
-        if (titleElement && !document.querySelector('.serval-button') && allTitleElements.length > 1) {
+        if (titleElement && !document.querySelector('.serval-button') && allTitleElements.length > 0) {
             const button = createButton(productId);
             button.classList.add('serval-button');
             titleElement.parentNode.insertBefore(button, titleElement.nextSibling);
